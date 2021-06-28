@@ -55,10 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HomeServices.Data\HomeServices.Data.csproj">
+      <Project>{72b8883e-9281-491a-a34d-2ad31e1b962d}</Project>
+      <Name>HomeServices.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeServices.Models\HomeServices.Models.csproj">
+      <Project>{2cc8a10f-87cd-4e39-8b49-22105dab865d}</Project>
+      <Name>HomeServices.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
