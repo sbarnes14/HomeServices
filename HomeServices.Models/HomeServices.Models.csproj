@@ -56,6 +56,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyCreate.cs" />
+    <Compile Include="PropertyDetail.cs" />
+    <Compile Include="PropertyEdit.cs" />
     <Compile Include="PropertyListItem.cs" />
   </ItemGroup>
   <ItemGroup>
