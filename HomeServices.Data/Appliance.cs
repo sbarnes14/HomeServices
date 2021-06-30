@@ -7,24 +7,23 @@ using System.Threading.Tasks;
 
 namespace HomeServices.Data
 {
-   public class Property
+    public class Appliance
     {
         [Key]
-        public int PropertyId { get; set; }
+        public int ApplianceId { get; set; }
 
         [Required]
         public Guid OwnerId { get; set; }
 
 
         [Required]
-        public int SquareFootage { get; set; }
+        public string ApplianceType { get; set; }
 
         [Required]
-        public int Yardsize { get; set; }
+        public string Manufacturer { get; set; }
 
         [Required]
-        public string Address { get; set; }
+        public string ApplianceModel { get; set; }
 
-        public virtual List<Appliance> Appliances { get; set; }
     }
 }

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<HomeServices.Models.ApplianceListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplianceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplianceType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplianceModel)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplianceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplianceType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplianceModel)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ApplianceId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ApplianceId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ApplianceId })
+            </td>
+        </tr>
+    }
+
+</table>

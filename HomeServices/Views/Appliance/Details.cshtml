@@ -1,0 +1,50 @@
+﻿@model HomeServices.Models.ApplianceDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ApplianceDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplianceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplianceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplianceType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplianceType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplianceModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplianceModel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ApplianceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

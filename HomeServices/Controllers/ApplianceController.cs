@@ -10,14 +10,14 @@ using System.Web.Mvc;
 namespace HomeServices.Controllers
 {
     [Authorize]
-    public class PropertyController : Controller
+    public class ApplianceController : Controller
     {
-        // GET: Property
+        // GET: Appliance
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new PropertyService(userId);
-            var model = service.GetProperties();
+            var service = new ApplianceService(userId);
+            var model = service.GetAppliances();
 
             return View(model);
         }
@@ -29,83 +29,81 @@ namespace HomeServices.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(PropertyCreate model)
+        public ActionResult Create(ApplianceCreate model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            var service = CreatePropertyService();
+            var service = CreateApplianceService();
 
-            if (service.CreateProperty(model))
+            if (service.CreateAppliance(model))
             {
-                TempData["SaveResult"] = "Your Property was added successfully";
+                TempData["SaveResult"] = "Your appliance was created";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Property could not be added");
+            ModelState.AddModelError("", "Appliance could not be added");
 
             return View(model);
         }
 
-        private PropertyService CreatePropertyService()
+        private ApplianceService CreateApplianceService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new PropertyService(userId);
+            var service = new ApplianceService(userId);
             return service;
         }
 
         public ActionResult Details(int id)
         {
-            var svc = CreatePropertyService();
-            var model = svc.GetPropertyById(id);
+            var svc = CreateApplianceService();
+            var model = svc.GetApplianceById(id);
 
             return View(model);
         }
 
         public ActionResult Edit(int id)
         {
-            var service = CreatePropertyService();
-            var detail = service.GetPropertyById(id);
+            var service = CreateApplianceService();
+            var detail = service.GetApplianceById(id);
             var model =
-                new PropertyEdit
+                new ApplianceEdit
                 {
-                    PropertyId = detail.PropertyId,
-                    SquareFootage = detail.SquareFootage,
-                    YardSize = detail.YardSize,
-                    Address = detail.Address
+                    ApplianceId = detail.ApplianceId,
+                    ApplianceType = detail.ApplianceType,
+                    Manufacturer = detail.Manufacturer,
+                    ApplianceModel = detail.ApplianceModel
                 };
             return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, PropertyEdit model)
+        public ActionResult Edit(int id, ApplianceEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if(model.PropertyId != id)
+            if(model.ApplianceId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
 
-            var service = CreatePropertyService();
-
-            if (service.UpdateProperty(model))
+            var service = CreateApplianceService();
+            if (service.UpdateAppliance(model))
             {
-                TempData["SaveResult"] = "your property was updated";
+                TempData["SaveResult"] = "your Appliance was updated";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your property could not be updated");
+            ModelState.AddModelError("", "Your appliance could not be updated");
             return View(model);
         }
 
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreatePropertyService();
-            ;
-            var model = svc.GetPropertyById(id);
+            var svc = CreateApplianceService();
+            var model = svc.GetApplianceById(id);
 
             return View(model);
         }
@@ -113,13 +111,13 @@ namespace HomeServices.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteProperty(int id)
+        public ActionResult DeleteAppliance(int id)
         {
-            var service = CreatePropertyService();
+            var service = CreateApplianceService();
 
-            service.DeleteProperty(id);
+            service.DeleteAppliance(id);
 
-            TempData["SaveResult"] = "Your Property was deleted";
+            TempData["SaveResult"] = "Your appliance was deleted";
 
             return RedirectToAction("Index");
         }
