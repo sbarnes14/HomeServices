@@ -1,4 +1,5 @@
-﻿using HomeServices.Models;
+﻿using HomeServices.Data;
+using HomeServices.Models;
 using HomeServices.Services;
 using Microsoft.AspNet.Identity;
 using System;

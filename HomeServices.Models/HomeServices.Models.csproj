@@ -58,6 +58,10 @@
     <Compile Include="ApplianceDetail.cs" />
     <Compile Include="ApplianceEdit.cs" />
     <Compile Include="ApplianceListItem.cs" />
+    <Compile Include="MerchantCreate.cs" />
+    <Compile Include="MerchantDetail.cs" />
+    <Compile Include="MerchantEdit.cs" />
+    <Compile Include="MerchantListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyCreate.cs" />
     <Compile Include="PropertyDetail.cs" />

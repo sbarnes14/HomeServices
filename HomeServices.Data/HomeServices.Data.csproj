@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Appliance.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Merchant.cs" />
     <Compile Include="Migrations\202106281516166_InitialCreate.cs" />
     <Compile Include="Migrations\202106281516166_InitialCreate.Designer.cs">
       <DependentUpon>202106281516166_InitialCreate.cs</DependentUpon>
@@ -71,6 +72,10 @@
     <Compile Include="Migrations\202106291523540_AddApplianceTable.cs" />
     <Compile Include="Migrations\202106291523540_AddApplianceTable.Designer.cs">
       <DependentUpon>202106291523540_AddApplianceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107011421045_ThirdMigration.cs" />
+    <Compile Include="Migrations\202107011421045_ThirdMigration.Designer.cs">
+      <DependentUpon>202107011421045_ThirdMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106291523540_AddApplianceTable.resx">
       <DependentUpon>202106291523540_AddApplianceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107011421045_ThirdMigration.resx">
+      <DependentUpon>202107011421045_ThirdMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

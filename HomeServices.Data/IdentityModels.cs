@@ -34,6 +34,7 @@ namespace HomeServices.Data
 
         public DbSet<Property> Properties { get; set; }
         public DbSet<Appliance> Appliances { get; set; }
+        public DbSet<Merchant> Merchants { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
