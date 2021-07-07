@@ -81,9 +81,14 @@
     <Compile Include="Migrations\202107061952448_Add propertyId to appliance.Designer.cs">
       <DependentUpon>202107061952448_Add propertyId to appliance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107072000416_Add full CRUD for Work Order.cs" />
+    <Compile Include="Migrations\202107072000416_Add full CRUD for Work Order.Designer.cs">
+      <DependentUpon>202107072000416_Add full CRUD for Work Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property.cs" />
+    <Compile Include="WorkOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -107,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107061952448_Add propertyId to appliance.resx">
       <DependentUpon>202107061952448_Add propertyId to appliance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107072000416_Add full CRUD for Work Order.resx">
+      <DependentUpon>202107072000416_Add full CRUD for Work Order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

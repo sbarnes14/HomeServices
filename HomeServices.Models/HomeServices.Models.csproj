@@ -67,6 +67,10 @@
     <Compile Include="PropertyDetail.cs" />
     <Compile Include="PropertyEdit.cs" />
     <Compile Include="PropertyListItem.cs" />
+    <Compile Include="WorkOrderCreate.cs" />
+    <Compile Include="WorkOrderDetail.cs" />
+    <Compile Include="WorkOrderEdit.cs" />
+    <Compile Include="WorkOrderListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
