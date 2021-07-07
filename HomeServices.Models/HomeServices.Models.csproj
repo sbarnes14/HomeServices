@@ -72,5 +72,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HomeServices.Data\HomeServices.Data.csproj">
+      <Project>{72B8883E-9281-491A-A34D-2AD31E1B962D}</Project>
+      <Name>HomeServices.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

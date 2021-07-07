@@ -1,6 +1,8 @@
-﻿using System;
+﻿using HomeServices.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,12 @@ namespace HomeServices.Models
 
         [Required]
         public string ApplianceModel { get; set; }
+
+        
+        [ForeignKey(nameof(PropertyId))]
+        public int PropertyId { get; set; }
+        public virtual Property Property { get; set; }
+
 
     }
 }

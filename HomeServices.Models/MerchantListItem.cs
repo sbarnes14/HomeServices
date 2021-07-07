@@ -8,6 +8,8 @@ namespace HomeServices.Models
 {
     public class MerchantListItem
     {
+        public int MerchantId { get; set; }
+
         public string MerchantName { get; set; }
 
         public ServiceType TypeService { get; set; }

@@ -34,9 +34,17 @@
             @Html.DisplayFor(model => model.Rating)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeService)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MerchantId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

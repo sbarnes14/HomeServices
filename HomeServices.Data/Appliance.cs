@@ -16,6 +16,9 @@ namespace HomeServices.Data
         public Guid OwnerId { get; set; }
 
         [Required]
+        public int PropertyId { get; set; }
+
+        [Required]
         public string ApplianceType { get; set; }
 
         [Required]

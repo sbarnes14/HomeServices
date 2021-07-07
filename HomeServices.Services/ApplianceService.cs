@@ -25,7 +25,8 @@ namespace HomeServices.Services
                     OwnerId = _userId,
                     ApplianceModel = model.ApplianceModel,
                     Manufacturer = model.Manufacturer,
-                    ApplianceType = model.ApplianceType
+                    ApplianceType = model.ApplianceType,
+                    PropertyId = model.PropertyId
                 };
             using (var ctx = new ApplicationDbContext())
             {

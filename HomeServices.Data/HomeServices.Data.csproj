@@ -73,9 +73,13 @@
     <Compile Include="Migrations\202106291523540_AddApplianceTable.Designer.cs">
       <DependentUpon>202106291523540_AddApplianceTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107011421045_ThirdMigration.cs" />
-    <Compile Include="Migrations\202107011421045_ThirdMigration.Designer.cs">
-      <DependentUpon>202107011421045_ThirdMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202107061931525_Add Merchant table and CRUD.cs" />
+    <Compile Include="Migrations\202107061931525_Add Merchant table and CRUD.Designer.cs">
+      <DependentUpon>202107061931525_Add Merchant table and CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107061952448_Add propertyId to appliance.cs" />
+    <Compile Include="Migrations\202107061952448_Add propertyId to appliance.Designer.cs">
+      <DependentUpon>202107061952448_Add propertyId to appliance.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,8 +102,11 @@
     <EmbeddedResource Include="Migrations\202106291523540_AddApplianceTable.resx">
       <DependentUpon>202106291523540_AddApplianceTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107011421045_ThirdMigration.resx">
-      <DependentUpon>202107011421045_ThirdMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107061931525_Add Merchant table and CRUD.resx">
+      <DependentUpon>202107061931525_Add Merchant table and CRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107061952448_Add propertyId to appliance.resx">
+      <DependentUpon>202107061952448_Add propertyId to appliance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
