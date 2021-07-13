@@ -19,6 +19,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.TypeService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeService)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.PropertyId)
         </dt>
 
@@ -29,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WordOrderId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

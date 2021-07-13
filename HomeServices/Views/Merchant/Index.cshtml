@@ -12,9 +12,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.MerchantId)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.MerchantName)
         </th>
         <th>
@@ -28,9 +25,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelitem => item.MerchantId)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.MerchantName)
         </td>
