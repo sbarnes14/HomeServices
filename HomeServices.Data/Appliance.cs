@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,10 @@ namespace HomeServices.Data
         [Required]
         public Guid OwnerId { get; set; }
 
+        [ForeignKey("Property")]
         [Required]
         public int PropertyId { get; set; }
+        public virtual Property Property { get; set; }
 
         [Required]
         public string ApplianceType { get; set; }

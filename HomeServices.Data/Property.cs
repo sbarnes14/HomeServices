@@ -15,7 +15,6 @@ namespace HomeServices.Data
         [Required]
         public Guid OwnerId { get; set; }
 
-
         [Required]
         public int SquareFootage { get; set; }
 

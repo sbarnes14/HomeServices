@@ -12,12 +12,14 @@ namespace HomeServices.Models
     public class ApplianceCreate
     {
         [Required]
+        [Display(Name ="Appliance Type")]
         public string ApplianceType { get; set; }
 
         [Required]
         public string Manufacturer { get; set; }
 
         [Required]
+        [Display(Name="Appliance Model")]
         public string ApplianceModel { get; set; }
 
         

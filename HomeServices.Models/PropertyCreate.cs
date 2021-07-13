@@ -10,9 +10,11 @@ namespace HomeServices.Models
     public class PropertyCreate
     {
         [Required]
+        [Display(Name ="Square Footage")]
         public int SquareFootage { get; set; }
 
         [Required]
+        [Display(Name ="Yard Size")]
         public int YardSize { get; set; }
 
         [Required]

@@ -14,6 +14,7 @@ namespace HomeServices.Models
         public int PropertyId { get; set; }
 
         [Required]
+        [Display(Name ="Service Type")]
         public ServiceType TypeService { get; set; }
 
         [Required]
